@@ -1,0 +1,98 @@
+@import '../../styles/colors.less';
+
+.header-search {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 8.5rem 3.25rem 8.625rem;
+
+    &__label {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.8125rem;
+        padding-bottom: 0.75rem;
+    }
+
+    &__input-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__input {
+        padding: 0.75rem 1rem;
+        width: 30%;
+        min-width: 200px;
+        max-width: 30%;
+        flex: 1 1 auto;
+    }
+
+    &__btn {
+        text-transform: uppercase;
+        background-color: @searchBtnBg;
+        cursor: pointer;
+        color: @white;
+        border: none;
+        outline: none;
+        padding: 0.85rem 3rem;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 2rem 4rem 2.5rem 4rem;
+
+        &__input {
+            width: 50%;
+            max-width: 40%;
+        }
+
+        &__btn {
+            padding: 0.75rem 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 1.5rem 2rem;
+ 
+        &__input-container {
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        &__label {
+            font-size: 0.75rem;
+        }
+
+        &__input {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &__btn {
+            width: 100%;
+            font-size: 0.75rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 1rem;
+
+        &__input-container {
+            gap: 1rem;
+        }
+
+        &__label {
+            font-size: 0.55rem;
+        }
+ 
+        &__input {
+            padding: 0.6rem 0.8rem;
+            max-width: 100%;
+        }
+
+        &__btn {
+            padding: 0.7rem 1.5rem;
+            font-size: 0.55rem;
+        }
+    }
+}

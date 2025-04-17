@@ -1,0 +1,47 @@
+@import '../../styles/colors.less';
+
+.table-header__col {
+    text-transform: uppercase;
+    color: @columnHeaderColor;
+    font-size: 12px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    padding: 1rem 1.5rem 0.75rem;
+    border-bottom: 0.125rem solid @rowSeparatorBg;
+
+    & > span {
+        font-size: 10px;
+    }
+
+    &:nth-child(1) {
+        width: 15%;
+        max-width: 15%;
+    }
+
+    &:nth-child(2) {
+        width: 15%;
+        max-width: 15%;
+    }
+
+    &:nth-child(3) {
+        width: 15%;
+        max-width: 15%;
+    }
+
+    &:nth-child(4) {
+        width: 15%;
+        max-width: 15%;
+    }
+}
+
+@media (max-width: 620px) {
+    .table-header__col {
+        font-size: 0.5rem;
+
+        & > span {
+            font-size: .45rem;
+        }
+    }
+}

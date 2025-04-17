@@ -1,0 +1,52 @@
+@import '../../styles/colors.less';
+
+.table-row {
+    height: auto;
+    vertical-align: top;
+    
+
+    .table-body__col {
+        padding: 1rem 1.5rem 0.75rem;
+        border-bottom: 0.125rem solid @rowSeparatorBg;
+        vertical-align: middle;
+        word-wrap: break-word;
+        font-size: 1rem;
+        color: @contentColor;
+        font-weight: bold;
+    
+        &:nth-child(1) {
+            width: 15%;
+            max-width: 15%;
+        }
+        
+        &:nth-child(2) {
+            width: 15%;
+            max-width: 15%;
+        }
+        
+        &:nth-child(3) {
+            width: 15%;
+            max-width: 15%;
+        }
+        
+        &:nth-child(4) {
+            width: 15%;
+            max-width: 15%;
+        }
+    }
+
+
+    @media (max-width: 620px) {
+        .table-body__col {
+            font-size: 0.6rem;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .table-body__col {
+            font-size: 0.45rem;
+            padding: 0.5rem 0.75rem 0.75rem 1.5rem;
+        }
+    }
+
+}
